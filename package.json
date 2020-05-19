@@ -1,0 +1,36 @@
+{
+  "name": "kgt-cli",
+  "version": "1.0.3",
+  "description": "A simple CLI for scaffolding Vue.js projects.",
+  "bin": {
+    "kgt": "bin/kgt",
+    "kgt-init": "bin/kgt-init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antwang/kgt-cli.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "kgt"
+  ],
+  "author": "ant wang",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^3.1.0",
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "consolidate": "^0.15.1",
+    "download-git-repo": "^2.0.0",
+    "handlebars": "^4.1.2",
+    "inquirer": "^6.4.1",
+    "metalsmith": "^2.3.0",
+    "minimatch": "^3.0.4",
+    "ora": "^3.4.0",
+    "rimraf": "^2.6.3",
+    "user-home": "^2.0.0"
+  }
+}
