@@ -8,11 +8,13 @@ const rm = require("rimraf").sync; // rimraf删除指定文件
 const path = require("path");
 const logger = require("../lib/logger"); // logger日志输出
 const { isLocalPath, getTemplatePath } = require("../lib/local-path");
-const generate = require("../lib/generate");
+const generate = require("../lib/generate"); 
 const ora = require("ora");
-
+const template3 = 'github:zhensg123/cliTemplate#master'
+// const template2 = 'gitlab:git.corpautohome.com:commoncloudweb/cloud_project_template2#master'
+let template = template3
 program
-  .usage("<template-name> [project-name]")
+  .usage("[project-name]")
   .option("-c, --clone", "use git clone");
 /**
  * Help.
@@ -21,7 +23,7 @@ program.on("--help", () => {
   console.log("  示例:");
   console.log();
   console.log(chalk.gray("    # 使用模板创建项目"));
-  console.log("    $ kgt init kg-vue-boilerplate my-project");
+  console.log("    $ zhen vue project-name");
   console.log();
 });
 
@@ -30,7 +32,6 @@ program.on("--help", () => {
  */
 function help() {
   program.parse(process.argv);
-  console.log(program.args, 'process.argv')
   if (program.args.length < 1) return program.help();
 }
 help();
@@ -39,9 +40,11 @@ help();
  * Settings.
  */
 // 模板名是什么
-let template = program.args[0];
-// 项目名叫什么
-const rawName = program.args[1];
+// let type = program.args[0]; // 后面可以使用vue-cli类别
+// 模板目录
+let root = '.cliVueTemplate'
+// 项目名叫什么 第二个参数作为目录名
+const rawName = program.args[0];
 // 是否在当前目录
 const inPlace = !rawName || rawName === ".";
 // 最终经过计算得到的项目名
@@ -49,21 +52,18 @@ const name = inPlace ? path.relative("../", process.cwd()) : rawName;
 // 模板最终会下载到什么地方
 const to = path.resolve(rawName || ".");
 // 是否使用git clone来下载私有仓库
-const clone = program.clone || false;
+// const clone = program.clone || false;
 // 模板的暂存目录
 const home = require("user-home"); // 得到用户的主目录
-const tmp = path.join(home, ".kgt-templates", template.replace(/[\/:]/g, "-"));
-console.log(template, tmp, clone,'tmp')
+const tmp = path.join(home, root, template.replace(/[\/:]/g, "-"));
 /**
  * Padding.
  */
 
-console.log();
 process.on("exit", () => {
   console.log();
 });
 // 询问用户是否是在当前目录下创建项目; 如果要存放的目录已经存在提示已存在
-console.log(inPlace,exists(to),'to');
 if (inPlace || exists(to)) {
   // 异步交互 和命令行工具进行交互 简单交互 如果是真则执行下一步 
   // inquirer这是一个简单功能
@@ -76,7 +76,6 @@ if (inPlace || exists(to)) {
       }
     ])
     .then(answers => {
-      console.log(answers, 'answers')
       if (answers.ok) {
         run();
       }
@@ -91,27 +90,20 @@ if (inPlace || exists(to)) {
  */
 
 function run() {
-  // check if template is local 本地模板
-  console.log(template,'template路径')
-  // isLocalPath判断是否是本地路径 ./ 是否是本地目录
-  if (isLocalPath(template)) {
-    const templatePath = getTemplatePath(template);
-    console.log(template,'templatePath 绝对路径')
-    // exists(templatePath) 判断是否是本地路径是的话意味着创建成功  否则日式未找到本地模板
-    if (exists(templatePath)) {
-      generate(name, templatePath, to, err => {
-        if (err) logger.fatal(err);
-        console.log();
-        logger.success('"%s" 创建成功.', name);
-      });
-    } else {
-      logger.fatal('未找到本地模板 "%s" .', template);
-    }
-  } else {
-    // 远程模板，需要先下载
-    console.log(template, 'template')
-    downloadAndGenerate(template);
-  }
+  // //   // 判断是不是本地模板
+  // const templatePath = getTemplatePath(tmp);
+  // if (isLocalPath(tmp) && exists(templatePath)) {
+  //   // exists(templatePath) 判断是否是本地路径是的话意味着创建成功  否则未找到本地模板
+  //   generate(name, templatePath, to, err => {
+  //     if (err) logger.fatal(err);
+  //     console.log();
+  //     logger.success('"%s" 创建成功.', name);
+  //   });
+  // } else {
+  //   // 远程模板，需要先下载
+  //   downloadAndGenerate(template);
+  // }
+  downloadAndGenerate(template);
 }
 
 /**
@@ -125,13 +117,12 @@ function downloadAndGenerate(template) {
 
   // 如果存在本地模板，先删除
   if (exists(tmp)) rm(tmp);
-  download(template, tmp, { clone }, err => {
+  download(template, tmp, { clone:true}, err => {
     spinner.stop();
     if (err) {
       logger.fatal("模板" + template + "下载失败" + ": " + err.message.trim());
     }
     // 生产项目方法 核心方法
-    console.log(name, tmp, to, 'to')
     // name为文件名 tmp数临时目录 生成的项目的目录
     generate(name, tmp, to, err => {
       if (err) logger.fatal(err);

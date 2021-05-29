@@ -1,23 +1,23 @@
 {
-  "name": "kgt-cli",
-  "version": "1.0.3",
+  "name": "zhen-cli",
+  "version": "1.0.9",
   "description": "A simple CLI for scaffolding Vue.js projects.",
   "bin": {
-    "kgt": "bin/kgt",
-    "kgt-init": "bin/kgt-init"
+    "zhen": "bin/zhen",
+    "zhen-vue": "bin/zhen-vue"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antwang/kgt-cli.git"
+    "url": ""
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "cli",
-    "kgt"
+    "zhen"
   ],
-  "author": "ant wang",
+  "author": "mr zhen",
   "license": "MIT",
   "dependencies": {
     "async": "^3.1.0",

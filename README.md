@@ -1,4 +1,4 @@
-# kgt
+# auto
 
 自定义命令行工具示例
 
@@ -7,20 +7,20 @@
 全局安装：
 
 ```
-npm i -g kgt-cli
+npm i -g auto-cli
 ```
 
 本地安装：
 
 ```
-npm i -D kgt-cli
+npm i -D auto-cli
 ```
 
 # 用法
 
 ```
 # 创建项目
-kgt init <templateName> [projectName]
+auto create [projectName]
 
 # 进入项目目录
 cd [projectName]
@@ -29,5 +29,5 @@ cd [projectName]
 npm install
 
 # 启动本地服务
-npm start
+npm run dev
 ```
