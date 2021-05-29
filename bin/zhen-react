@@ -10,8 +10,7 @@ const logger = require("../lib/logger"); // logger日志输出
 const { isLocalPath, getTemplatePath } = require("../lib/local-path");
 const generate = require("../lib/generate"); 
 const ora = require("ora");
-const template3 = 'github:zhensg123/cliTemplate#master'
-// const template2 = 'gitlab:git.corpautohome.com:commoncloudweb/cloud_project_template2#master'
+const template3 = 'github:zhensg123/cliReactTemplate#master'
 let template = template3
 program
   .usage("[project-name]")
@@ -23,7 +22,7 @@ program.on("--help", () => {
   console.log("  示例:");
   console.log();
   console.log(chalk.gray("    # 使用模板创建项目"));
-  console.log("    $ zhen vue project-name");
+  console.log("    $ zhen create project-name");
   console.log();
 });
 
@@ -42,7 +41,7 @@ help();
 // 模板名是什么
 // let type = program.args[0]; // 后面可以使用vue-cli类别
 // 模板目录
-let root = '.cliVueTemplate'
+let root = '.cliReactTemplate'
 // 项目名叫什么 第二个参数作为目录名
 const rawName = program.args[0];
 // 是否在当前目录

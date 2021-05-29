@@ -4,7 +4,8 @@
   "description": "A simple CLI for scaffolding Vue.js projects.",
   "bin": {
     "zhen": "bin/zhen",
-    "zhen-vue": "bin/zhen-vue"
+    "zhen-vue": "bin/zhen-vue",
+    "zhen-react": "bin/zhen-react"
   },
   "repository": {
     "type": "git",
