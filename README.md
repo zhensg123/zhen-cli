@@ -7,20 +7,23 @@
 全局安装：
 
 ```
-npm i -g auto-cli
+npm i -g zhen-cli
 ```
 
 本地安装：
 
 ```
-npm i -D auto-cli
+npm i -D zhen-cli
 ```
 
 # 用法
 
 ```
-# 创建项目
-auto create [projectName]
+# 创建vue项目
+zhen vue [projectName]
+
+# 创建react项目
+zhen create [projectName]
 
 # 进入项目目录
 cd [projectName]

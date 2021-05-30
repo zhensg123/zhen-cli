@@ -1,6 +1,6 @@
 {
   "name": "zhen-cli",
-  "version": "1.0.9",
+  "version": "1.0.2",
   "description": "A simple CLI for scaffolding Vue.js projects.",
   "bin": {
     "zhen": "bin/zhen",
