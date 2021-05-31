@@ -32,5 +32,5 @@ cd [projectName]
 npm install
 
 # 启动本地服务
-npm run dev
+npm run serve/start
 ```
