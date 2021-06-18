@@ -1,0 +1,37 @@
+/* 改变主题色变量 */
+$--color-primary: #437CFF;
+
+$--border-radius-base: 0;
+$--border-radius-small: 0;
+$--card-border-color: #E4E7ED;
+$--box-shadow-light: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+
+*[class^="el-checkbox"], .el-tag, .el-pagination *,
+.el-card, .el-notification, .el-message-box, .el-popover {
+  border-radius: 0 !important;
+}
+
+.dark.el-input {
+  .el-input__prefix {
+    color: #60626f;
+  }
+
+  input {
+    border: none;
+    border-bottom: 1px solid #283845;
+    background-color: #e9e9ed;
+
+    &:focus, &:hover {
+      background-color: #e9e9ed;
+    }
+
+    &::-webkit-input-placeholder {
+      color: #60626f;
+    }
+  }
+}
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import '~element-ui/lib/theme-chalk/index.css'

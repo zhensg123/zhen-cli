@@ -6,5 +6,6 @@ program
   .usage("<command> [options]")
   .option('--no-sauce', 'Remove sauce')
   .command("vue", "generate a new project from a template")
-  .command("react", "generate a new project from a template");
+  .command("react", "generate a new project from a template")
+  .command("test", "generate a new project from a template");
 program.parse(process.argv); // 去掉后不管作用
