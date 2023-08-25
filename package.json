@@ -1,11 +1,12 @@
 {
   "name": "zhen-cli",
-  "version": "1.0.12",
+  "version": "2.0.12",
   "description": "A simple CLI for scaffolding Vue.js projects.",
   "bin": {
     "zhen": "bin/zhen",
     "zhen-vue": "bin/zhen-vue",
-    "zhen-react": "bin/zhen-react"
+    "zhen-react": "bin/zhen-react",
+    "zhen-test": "bin/zhen-react"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,45 @@
+{
+  "name": "{{name}}",
+  "description": "{{description}}",
+  "author": "{{author}}",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --mode development",
+    "build:test": "vue-cli-service build --mode test",
+    "build:prod": "vue-cli-service build --mode prod",
+    "analyzer": "cross-env use_analyzer=true npm run serve",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "element-ui": "^2.15.2",    
+    "core-js": "^3.8.3",
+    "vue": "^2.6.14",
+    {{#store}}
+    "vuex": "^3.6.2",
+    {{/store}}
+    "vue-router": "^3.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "compression-webpack-plugin": "^10.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "sass": "^1.32.7",
+    "sass-loader": "^12.0.0",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}
