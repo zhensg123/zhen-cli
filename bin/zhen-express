@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+const executerTask = require("../lib/entry");
+const config = {
+  template:'template-express-js',
+  log: "    $ zhen vue project-name"
+}
+executerTask(config)
