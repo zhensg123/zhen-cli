@@ -2,8 +2,7 @@
 
 const executerTask = require("../lib/entry");
 const config = {
-  template:'zhensg123/cliReactTemplate#master',
-  root: '.cliReactTemplate',
+  template:'template-react-js',
   log: "    $ zhen create project-name"
 }
 

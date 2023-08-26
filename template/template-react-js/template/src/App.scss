@@ -1,0 +1,147 @@
+@import '~antd/dist/antd.css';
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transition: all 0.5s;
+  z-index: 100;
+  width: 188px;
+  background: #fff;
+  > .ant-menu {
+    width: 188px !important;
+ }
+}
+.title {
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: linear-gradient(
+    to right,
+    rgba(30,128,255, 1),
+    rgba(30,128,255, 0.6)
+  );
+  color: #fff;
+  padding-left: 8px;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  svg {
+    height: 30px;
+    width: 30px;
+    margin-right: 2px;
+  }
+}
+
+.title-name {
+  font-size: 16px;
+  white-space: nowrap;
+  font-weight: bold;
+}
+.headers {
+  height: 48px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 188px;
+  height: 48px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  right: 0;
+  transition: all 0.5s;
+  z-index: 100;
+  border: 1px solid #efeaed;
+
+  .handle-btn {
+    height: 100%;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    cursor: pointer;
+
+    i {
+      font-size: 18px;
+      margin-left: 10px;
+      color: #82848a;
+    }
+    &:hover {
+      background: #ecf5ff;
+    }
+  }
+
+  .user-name {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    color: #000;
+
+    i {
+      padding-right: 5px;
+      font-size: 18px;
+    }
+    i.icon-tuichu {
+      margin-left: 15px;
+      color: #82848a;
+      padding-right: 0px;
+      cursor: pointer;
+    }
+  }
+}
+
+.right {
+  margin-top: 53px;
+  padding-left: 193px;
+  transition: all 0.5s;
+  margin-bottom: 80px;
+
+  .breadcrumb {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}

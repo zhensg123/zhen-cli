@@ -2,8 +2,7 @@
 
 const executerTask = require("../lib/entry");
 const config = {
-  template:'zhensg123/cliTemplate#master',
-  root: '.cliVueTemplate',
+  template:'template-vue2-js',
   log: "    $ zhen vue project-name"
 }
 executerTask(config)

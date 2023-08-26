@@ -5,8 +5,7 @@
   "bin": {
     "zhen": "bin/zhen",
     "zhen-vue": "bin/zhen-vue",
-    "zhen-react": "bin/zhen-react",
-    "zhen-test": "bin/zhen-react"
+    "zhen-react": "bin/zhen-react"
   },
   "repository": {
     "type": "git",

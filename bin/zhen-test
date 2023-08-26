@@ -1,9 +1,0 @@
-#!/usr/bin/env node
-
-const executerTask = require("../lib/entry");
-const config = {
-  template:'zhensg123/cliTemplate#master',
-  root: '.cliVueTemplate',
-  log: "    $ zhen vue project-name"
-}
-executerTask(config)
