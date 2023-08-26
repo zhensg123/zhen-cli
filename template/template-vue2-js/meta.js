@@ -32,7 +32,7 @@ module.exports = {
     // },
     store: {
       type: "confirm",
-      message: "是否安装vuex"
+      message: "Do you want to install Vuex"
     },
     // eslint: {
     //   type: "confirm",

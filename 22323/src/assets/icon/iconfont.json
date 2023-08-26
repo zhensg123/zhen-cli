@@ -1,0 +1,114 @@
+{
+  "id": "2588275",
+  "name": "xproject",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "11680221",
+      "name": "火箭",
+      "font_class": "huojian1",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "3877902",
+      "name": "火箭",
+      "font_class": "huojian",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "8229473",
+      "name": "退出",
+      "font_class": "tuichu",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "13638698",
+      "name": "优先级",
+      "font_class": "youxianji1",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "7407752",
+      "name": "状态、历史",
+      "font_class": "zhuangtailishi",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "8206753",
+      "name": "迭代",
+      "font_class": "dd",
+      "unicode": "e75d",
+      "unicode_decimal": 59229
+    },
+    {
+      "icon_id": "15226162",
+      "name": "维修站-负责人",
+      "font_class": "weixiuzhan-fuzeren",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "6264941",
+      "name": "产线效率提升",
+      "font_class": "chanxianxiaoshuaitisheng",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "21703163",
+      "name": "头像",
+      "font_class": "yonghu",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "18010828",
+      "name": "大盘",
+      "font_class": "marketindex",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "18887288",
+      "name": "测试",
+      "font_class": "ceshi",
+      "unicode": "e6ff",
+      "unicode_decimal": 59135
+    },
+    {
+      "icon_id": "6425579",
+      "name": "反馈",
+      "font_class": "fankui",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "7044215",
+      "name": "项目管理",
+      "font_class": "shixushujuku",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "7992530",
+      "name": "系统配置",
+      "font_class": "xitongpeizhi",
+      "unicode": "e6f4",
+      "unicode_decimal": 59124
+    },
+    {
+      "icon_id": "17189120",
+      "name": "我的工作",
+      "font_class": "wodegongzuo",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    }
+  ]
+}
