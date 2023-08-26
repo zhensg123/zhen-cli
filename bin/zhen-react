@@ -1,9 +1,0 @@
-#!/usr/bin/env node
-
-const executerTask = require("../lib/entry");
-const config = {
-  template:'template-react-js',
-  log: "    $ zhen create project-name"
-}
-
-executerTask(config)

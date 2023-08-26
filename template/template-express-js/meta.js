@@ -12,17 +12,17 @@ module.exports = {
     name: {
       type: "string",
       required: true,
-      message: "项目名"
+      message: "Input project name"
     },
     description: {
       type: "string",
       required: false,
-      message: "项目描述",
+      message: "Input project description",
       default: "react项目"
     },
     author: {
       type: "string",
-      message: "Author",
+      message: "Input project author",
       required: false,
       default: ""
     },

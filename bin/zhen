@@ -7,7 +7,5 @@ program
   .version(require("../package").version)
   .usage("<command> [options]")
   .option('--no-sauce', 'Remove sauce')
-  .command("vue", "generate a new vue project from a template") // 注册vue命令
-  .command("react", "generate a new react project from a template") // 注意react命令
-  .command("express", "generate a new express project from a template") // 注意react命令
+  .command("create", "generate a new  project from a template") //
 program.parse(process.argv); // 去掉后不管作用
