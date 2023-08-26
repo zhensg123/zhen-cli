@@ -1,7 +1,7 @@
 {
   "name": "zhen-cli",
-  "version": "2.0.16",
-  "description": "A simple CLI for scaffolding Vue.js projects.",
+  "version": "2.1.0",
+  "description": "A simple CLI for fe projects.",
   "bin": {
     "zhen": "bin/zhen",
     "zhen-create": "bin/zhen-create"
@@ -21,6 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "async": "^3.1.0",
+    "boxen": "^6.0.0",
     "chalk": "^2.4.2",
     "commander": "^2.20.0",
     "consolidate": "^0.15.1",

@@ -1,6 +1,6 @@
 # zhen-cli
 
-自定义命令行工具:用于本地生成vue或者react项目工程模板
+自定义命令行工具:用于本地生成vue&react&express项目工程模板
 
 # 安装
 
@@ -19,8 +19,7 @@ npm i -D zhen-cli
 # 用法
 
 ```
-# 创建vue项目
-zhen vue [projectName]
+
 
 # 创建react项目
 zhen create [projectName]
