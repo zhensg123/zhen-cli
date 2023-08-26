@@ -22,7 +22,11 @@ npm i -D zhen-cli
 
 
 # 创建react项目
-zhen create [projectName]
+zhen react [projectName]
+
+
+# 创建express项目
+zhen express [projectName]
 
 # 进入项目目录
 cd [projectName]

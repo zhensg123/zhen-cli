@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+const executerTask = require("../lib/entry");
+const config = {
+  template:'zhensg123/cliExpressTemplate#master',
+  root: '.cliExpressTemplate',
+  log: "    $ zhen express project-name"
+}
+
+executerTask(config)

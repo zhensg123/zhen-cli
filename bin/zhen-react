@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+const executerTask = require("../lib/entry");
+const config = {
+  template:'zhensg123/cliReactTemplate#master',
+  root: '.cliReactTemplate',
+  log: "    $ zhen react project-name"
+}
+
+executerTask(config)
