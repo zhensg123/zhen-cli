@@ -113,12 +113,12 @@ myAjax.interceptors.response.use(response => {
   if (axios.isCancel(error)) {
     console.warn(error)
     const message = (error && error.response && error.response.data && (error.response.data.message || error.response.data.Message))
-    // Message({
-    //   message: message || '接口或网络异常',
-    //   type: 'error'
-    // })
     return Promise.reject(error)
   }
   pendingRequests.clear()
+  Message({
+      message: error.message || '接口或网络异常',
+      type: 'error'
+  })
   return Promise.reject(error)
 })
