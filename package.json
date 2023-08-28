@@ -1,6 +1,6 @@
 {
   "name": "zhen-cli",
-  "version": "2.2.3",
+  "version": "2.3.2",
   "description": "A simple CLI for fe projects.",
   "bin": {
     "zhen": "bin/zhen",
